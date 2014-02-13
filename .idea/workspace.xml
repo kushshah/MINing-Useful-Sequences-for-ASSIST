@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e0656ea-16e4-4a41-b1c9-9d1289a9ea49" name="Default" comment="JSON integration&#10;Modularised to level 1&#10;     Directory defined for storing created helper files and also where the input file is expected&#10;     BIDE process isolated&#10;Class instead of main method only&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BIDEOP.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JSONTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MethodMapJSON.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MethodTraceJSON.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MethodTraceJSON.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SequenceMapJSON.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/frequent.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestProcessing.iml" afterPath="$PROJECT_DIR$/TestProcessing.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bide_ip.spec" afterPath="$PROJECT_DIR$/src/bide_ip.spec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frequent.dat" afterPath="$PROJECT_DIR$/frequent.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="0e0656ea-16e4-4a41-b1c9-9d1289a9ea49" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestProcessing.iws" />
@@ -496,6 +484,11 @@
       <created>1391438330831</created>
       <updated>1391438330831</updated>
     </task>
+    <task id="LOCAL-00001" summary="JSON integration&#10;Modularised to level 1&#10;     Directory defined for storing created helper files and also where the input file is expected&#10;     BIDE process isolated&#10;Class instead of main method only&#10;">
+      <created>1392333358893</created>
+      <updated>1392333358893</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
