@@ -13,59 +13,207 @@ import java.util.*;
  * Created by Kush on 2/3/14.
  */
 public class Test {
-    public boolean isPresent(String [] substring, String [] sequence){
-        if(substring.length > sequence.length){
-            return false;
-        }
-        int j = 0;
-        int counter = 0;
-        for(String each_ss : substring){
-            for(int i = j; i < sequence.length; i++){
-                if(each_ss.equals(sequence[i])){
-                    counter =  counter + 1;
-                    j = i + 1;
-                    if(counter == substring.length){
-//                        for(String one:substring){
-//                            System.out.print(one+":");
-//                        }
-//                        for(String two:sequence){
-//                            System.out.print(two);
-//                        }
-//                        System.out.println(substring+":"+sequence);
-                        return true;
-
-                    }
-                 break;
-                }
-            }
-            //return false;
-        }
-        if(counter == substring.length){
-            for(String one:substring){
-                System.out.print(one+":");
-            }
-            for(String two:sequence){
-                System.out.print(two);
-            }
-//            System.out.println(substring+":"+sequence);
-            return true;
-
-        }
-        return false;
-    }
+    String folderName;
+    String bideFolder;
+    Object obj;
+    JSONArray array;
+    Iterator iterator;
+    JSONParser parser;
+    ContainerFactory containerFactory;
+    HashMap<String, Integer > methodHashMap;
+    BufferedWriter bufferedWriter;
+    int seqCount;
+    int maxSeq;
+    float seqTotal;
 
     public Test(String folderName, String bideFolder) {
         createMethodMapAndSequenceMap(folderName, bideFolder);
         runBIDE(bideFolder);
         formatBIDEOP(folderName, bideFolder);
+    }
+
+    public Test(String folderName) {
+        this.folderName = folderName;
+        this.bideFolder = "C:\\Users\\Kush\\Documents\\CS598\\BIDE\\";
+        this.containerFactory = new ContainerFactory(){
+            public List creatArrayContainer() {
+                return new LinkedList();
+            }
+
+            public Map createObjectContainer() {
+                return new LinkedHashMap();
+            }
+
+        };
+        this.methodHashMap = new HashMap<String, Integer>();
+        this.parser = new JSONParser();
+        seqCount = 0;
+        maxSeq = 0;
+        seqTotal = 0;
+        createMethodMap();
+        createSequenceMap();
+        createBIDEIP();
+        createBIDESpec();
+        runBIDE(this.bideFolder);
+        formatBIDEOP(this.folderName, this.bideFolder);
 
     }
 
+    private void createBIDESpec() {
+        try {
+            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP1.spec"));
+            bufferedWriter.write(bideFolder + "BideIP1.txt");
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(methodHashMap.size()));
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(seqCount));
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(maxSeq));
+            bufferedWriter.newLine();
+            bufferedWriter.write(String.valueOf(Math.round(seqTotal/seqCount)));
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void createBIDEIP() {
+        try {
+            boolean flag = false;
+            int seqCount = 0;
+            JSONArray seq = new JSONArray();
+            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP1.txt"));
+            obj = JSONValue.parse(new FileReader(this.folderName + "MethodTraceJSON.log"));
+            array=(JSONArray)obj;
+            iterator = array.iterator();
+            String leastLevel = ((Map)parser.parse(array.get(0).toString(), containerFactory)).get("level").toString();
+            while (iterator.hasNext()){
+                String line = iterator.next().toString();
+                Map lineMap = (Map)parser.parse(line, containerFactory);
+                if(lineMap.get("level").toString().equals(leastLevel) && flag ){
+                    seqCount = seqCount + 1;
+                    for(String each : seq.toJSONString().substring(1,seq.toJSONString().length()-1).split(",")){
+                        bufferedWriter.write(each + " ");
+                    }
+                    if(seq.size() > this.maxSeq){
+                        this.maxSeq = seq.size();
+                    }
+                    this.seqTotal = this.seqTotal + seq.size();
+                    this.seqCount = this.seqCount + 1;
+                    bufferedWriter.write("-1");
+                    bufferedWriter.newLine();
+                    seq.removeAll(seq);
+                }
+                seq.add(methodHashMap.get(lineMap.get("class-name").toString()+lineMap.get("method-name").toString()));
+                flag = true;
+            }
+            this.seqCount = this.seqCount + 1;
+            for(String each : seq.toJSONString().substring(1,seq.toJSONString().length()-1).split(",")){
+                bufferedWriter.write(each + " ");
+            }
+            bufferedWriter.write("-1 -2");
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void createSequenceMap() {
+
+        try {
+            int count = 0;
+            int seqCount = 0;
+            JSONArray seqMapArray = new JSONArray();
+            JSONArray seq = new JSONArray();
+            JSONArray counterSeq = new JSONArray();
+            bufferedWriter = new BufferedWriter(new FileWriter(folderName + "SequenceMapJSON1.log"));
+            obj = JSONValue.parse(new FileReader(this.folderName + "MethodTraceJSON.log"));
+            array=(JSONArray)obj;
+            iterator = array.iterator();
+            String leastLevel = ((Map)parser.parse(array.get(0).toString(), containerFactory)).get("level").toString();
+            while (iterator.hasNext()){
+                String line = iterator.next().toString();
+                Map lineMap = (Map)parser.parse(line, containerFactory);
+                if(lineMap.get("level").toString().equals(leastLevel) && count != 0 ){
+                    JSONObject sequence = new JSONObject();
+                    sequence.put("sequence-id", seqCount);
+                    seqCount = seqCount + 1;
+                    sequence.put("method-id", seq.clone());
+                    sequence.put("counters", counterSeq.clone());
+                    seqMapArray.add(sequence);
+                    seq.removeAll(seq);
+                    counterSeq.removeAll(counterSeq);
+                }
+                seq.add(methodHashMap.get(lineMap.get("class-name").toString()+lineMap.get("method-name").toString()));
+                counterSeq.add(lineMap.get("counter"));
+                count = count + 1;
+            }
+            JSONObject sequence = new JSONObject();
+            sequence.put("sequence-id", seqCount);
+            seqCount = seqCount + 1;
+            sequence.put("method-id", seq.clone());
+            sequence.put("counters", counterSeq.clone());
+            seqMapArray.add(sequence);
+            bufferedWriter.write(seqMapArray.toJSONString());
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void createMethodMap() {
+        int methodCount = 0;
+        JSONArray methodMapArray = new JSONArray();
+        try {
+            bufferedWriter = new BufferedWriter(new FileWriter(folderName + "MethodMapJSON1.log"));
+            obj = JSONValue.parse(new FileReader(this.folderName + "MethodTraceJSON.log"));
+            array=(JSONArray)obj;
+            iterator = array.iterator();
+            while (iterator.hasNext()){
+                String line = iterator.next().toString();
+                Map lineMap = (Map)parser.parse(line, containerFactory);
+
+                if(ismethodNotPresent(lineMap)){
+                    JSONObject method = new JSONObject();
+                    method.put("method-id",methodCount);
+                    method.put("class-name",lineMap.get("class-name"));
+                    method.put("method-name", lineMap.get("method-name"));
+                    methodMapArray.add(method);
+                    this.methodHashMap.put(lineMap.get("class-name").toString()+lineMap.get("method-name").toString(),methodCount);
+                    methodCount = methodCount + 1;
+                }
+            }
+            bufferedWriter.write(methodMapArray.toJSONString());
+            bufferedWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean methodNotPresent(HashMap<String,Integer> methodHashMap, Map line) {
+        return !(methodHashMap.containsKey(line.get("class-name").toString()+line.get("method-name").toString()));
+    }
+
+    private boolean ismethodNotPresent( Map line) {
+        return !(this.methodHashMap.containsKey(line.get("class-name").toString()+line.get("method-name").toString()));
+    }
     public static void main(String[] args) {
         //--------------------------------------new code---------------------------------------------------------------
         String folderName = "C:\\Users\\Kush\\IdeaProjects\\TestProcessing\\"; /*OR = args[1]*/
         String bideFolder = "C:\\Users\\Kush\\Documents\\CS598\\BIDE\\";
-        Test test = new Test(folderName, bideFolder);
+//       Test test = new Test(folderName, bideFolder);
+        Test test = new Test(folderName);
+
 
         //--------------------------------------new code---------------------------------------------------------------
         //--------------------------------------old code---------------------------------------------------------------
@@ -242,7 +390,7 @@ public class Test {
 
     private void formatBIDEOP(String folderName, String bideFolder) {
         try {
-            BufferedWriter bideOP = new BufferedWriter(new FileWriter(folderName + "BIDEOP.log"));
+            BufferedWriter bideOP = new BufferedWriter(new FileWriter(folderName + "BIDEOP1.log"));
             Scanner sc = new Scanner(new FileReader(folderName+"frequent.dat"));
             JSONArray mainArray = new JSONArray();
 
@@ -280,7 +428,7 @@ public class Test {
 
         JSONArray mainArray = new JSONArray();
         try {
-            Object obj= JSONValue.parse(new FileReader(folderName + "SequenceMapJSON.log"));
+            Object obj= JSONValue.parse(new FileReader(folderName + "SequenceMapJSON1.log"));
             JSONArray array=(JSONArray)obj;
             Iterator iterator = array.iterator();
             JSONParser parser = new JSONParser();
@@ -343,7 +491,7 @@ public class Test {
         try {
 //            comment the following 3 lines if direct command from another file
             BufferedWriter bw = new BufferedWriter(new FileWriter(folderName + "BIDE_cmd.bat"));
-            bw.write(folderName + "BIDEwithOUTPUT.exe " + folderName + "BideIP.spec 0.2");
+            bw.write(folderName + "BIDEwithOUTPUT.exe " + folderName + "BideIP1.spec 0.2");
             bw.close();
 //            change file name here for direct execution
             pr = Runtime.getRuntime().exec(folderName + "BIDE_cmd.bat");
@@ -474,7 +622,44 @@ public class Test {
         }
     }
 
-    private boolean methodNotPresent(HashMap<String,Integer> methodHashMap, Map line) {
-        return !(methodHashMap.containsKey(line.get("class-name").toString()+line.get("method-name").toString()));
+    public boolean isPresent(String [] substring, String [] sequence){
+        if(substring.length > sequence.length){
+            return false;
+        }
+        int j = 0;
+        int counter = 0;
+        for(String each_ss : substring){
+            for(int i = j; i < sequence.length; i++){
+                if(each_ss.equals(sequence[i])){
+                    counter =  counter + 1;
+                    j = i + 1;
+                    if(counter == substring.length){
+//                        for(String one:substring){
+//                            System.out.print(one+":");
+//                        }
+//                        for(String two:sequence){
+//                            System.out.print(two);
+//                        }
+//                        System.out.println(substring+":"+sequence);
+                        return true;
+
+                    }
+                    break;
+                }
+            }
+            //return false;
+        }
+        if(counter == substring.length){
+            for(String one:substring){
+                System.out.print(one+":");
+            }
+            for(String two:sequence){
+                System.out.print(two);
+            }
+//            System.out.println(substring+":"+sequence);
+            return true;
+
+        }
+        return false;
     }
 }
