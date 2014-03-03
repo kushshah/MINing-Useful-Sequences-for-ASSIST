@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e0656ea-16e4-4a41-b1c9-9d1289a9ea49" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/TestCases.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/MyTestTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Kush\IdeaProjects\TestProcessing\src\main\java\Test.java" afterPath="$PROJECT_DIR$/src/main/java/MyTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BIDEOP.log" afterPath="$PROJECT_DIR$/BIDEOP.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JSONTest.java" afterPath="$PROJECT_DIR$/src/main/java/JSONTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MethodTraceJSON.log" afterPath="$PROJECT_DIR$/MethodTraceJSON.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SequenceMapJSON.log" afterPath="$PROJECT_DIR$/SequenceMapJSON.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Test.java" afterPath="$PROJECT_DIR$/src/main/java/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestCases.java" afterPath="$PROJECT_DIR$/src/test/java/TestCases.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestProcessing.iml" afterPath="$PROJECT_DIR$/TestProcessing.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frequent.dat" afterPath="$PROJECT_DIR$/frequent.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
@@ -23,6 +24,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -67,6 +73,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/MyTest.java" line="281" class="MyTest" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -76,65 +99,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="MyTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="510">
-              <folding />
+            <state line="84" column="32" selection-start="2522" selection-end="2522" vertical-scroll-proportion="1.6657304" vertical-offset="291" max-vertical-offset="1445">
+              <folding>
+                <element signature="docComment;class#MyTest#0" expanded="false" />
+                <element signature="e#717#776#0" expanded="false" />
+                <element signature="method#createBIDESpec#0;class#MyTest#0" expanded="false" />
+                <element signature="method#createBIDEIP#0;class#MyTest#0" expanded="false" />
+                <element signature="method#createSequenceMap#0;class#MyTest#0" expanded="false" />
+                <element signature="method#createMethodMap#0;class#MyTest#0" expanded="false" />
+                <element signature="method#ismethodNotPresent#0;class#MyTest#0" expanded="false" />
+                <element signature="method#main#0;class#MyTest#0" expanded="false" />
+                <element signature="method#formatBIDEOP#0;class#MyTest#0" expanded="false" />
+                <element signature="method#getOccurrences#0;class#MyTest#0" expanded="false" />
+                <element signature="e#11110#11118#0" expanded="true" />
+                <element signature="e#11185#11193#0" expanded="true" />
+                <element signature="e#11489#11497#0" expanded="true" />
+                <element signature="e#11566#11574#0" expanded="true" />
+                <element signature="method#getOccurence#0;class#MyTest#0" expanded="false" />
+                <element signature="e#14337#14351#0" expanded="true" />
+                <element signature="method#isIncreasing#0;class#MyTest#0" expanded="false" />
+                <element signature="method#getTempList#0;class#MyTest#0" expanded="false" />
+                <element signature="e#15477#15494#0" expanded="true" />
+                <element signature="e#15579#15587#0" expanded="true" />
+                <element signature="method#getOccurrences#1;class#MyTest#0" expanded="false" />
+                <element signature="method#runBIDE#0;class#MyTest#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCases.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestCases.java">
+      <file leaf-file-name="MyTestTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MyTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.18579236" vertical-offset="0" max-vertical-offset="366">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BideIP1.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BideIP1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MethodMapJSON1.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MethodMapJSON1.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SequenceMapJSON1.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SequenceMapJSON1.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BIDEOP.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BIDEOP.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frequent.dat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frequent.dat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-              <folding />
+            <state line="39" column="62" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="952">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,7 +145,59 @@
       <file leaf-file-name="JSONTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/JSONTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="42" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1649" max-vertical-offset="2176">
+            <state line="175" column="21" selection-start="6642" selection-end="6642" vertical-scroll-proportion="0.0" vertical-offset="2863" max-vertical-offset="3264">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1026#1034#0" expanded="true" />
+                <element signature="e#1225#1233#0" expanded="true" />
+                <element signature="e#1424#1432#0" expanded="true" />
+                <element signature="e#1602#1610#0" expanded="true" />
+                <element signature="e#1688#1705#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1136" column="15" selection-start="44143" selection-end="44143" vertical-scroll-proportion="0.0" vertical-offset="18582" max-vertical-offset="52292">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="19" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BideMethodTracemap" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BideMethodTracemap">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BIDEOP1.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BIDEOP1.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCases.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestCases.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="31" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="663">
               <folding />
             </state>
           </provider>
@@ -151,16 +206,7 @@
       <file leaf-file-name="MethodTraceJSON.log" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MethodTraceJSON.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="136" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SequenceMapJSON.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SequenceMapJSON.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+            <state line="4" column="136" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -185,13 +231,17 @@
         <option value="$PROJECT_DIR$/src/JSONTest.java" />
         <option value="$PROJECT_DIR$/src/MethodTraceJSON.log" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestCases.java" />
-        <option value="$PROJECT_DIR$/MethodMapJSON1.log" />
         <option value="$PROJECT_DIR$/SequenceMapJSON1.log" />
         <option value="$PROJECT_DIR$/SequenceMapJSON.log" />
-        <option value="$PROJECT_DIR$/MethodTraceJSON.log" />
         <option value="$PROJECT_DIR$/src/main/java/Test.java" />
+        <option value="$PROJECT_DIR$/MethodMapJSON1.log" />
+        <option value="$PROJECT_DIR$/BIDEOP1.log" />
+        <option value="$PROJECT_DIR$/MethodTraceJSON.log" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/TestCases.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JSONTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MyTestTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MyTest.java" />
       </list>
     </option>
   </component>
@@ -231,10 +281,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -262,7 +312,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,6 +399,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,8 +436,17 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="844" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kush\IdeaProjects\TestProcessing" />
       <recent name="C:\Users\Kush\IdeaProjects\TestProcessing\src" />
@@ -397,7 +456,7 @@
       <recent name="C:\Users\Kush\IdeaProjects\TestProcessing\src\Resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.MyTest">
     <configuration default="false" name="JSONTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JSONTest" />
       <option name="VM_PARAMETERS" />
@@ -414,10 +473,102 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="TestProcessing" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyTestTest.testGetTempList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestProcessing" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTestTest" />
+      <option name="METHOD_NAME" value="testGetTempList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyTestTest.testGetOccurrence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestProcessing" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTestTest" />
+      <option name="METHOD_NAME" value="testGetOccurrence" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -442,45 +593,12 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -508,6 +626,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -585,13 +716,19 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Test" />
       <item index="1" class="java.lang.String" itemvalue="Application.JSONTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MyTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MyTestTest.testGetTempList" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MyTestTest.testGetOccurrence" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.JSONTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.MyTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MyTestTest.testGetOccurrence" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MyTestTest.testGetTempList" />
+        <item index="3" class="java.lang.String" itemvalue="Application.JSONTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -643,11 +780,15 @@
       <created>1392403233836</created>
       <updated>1392403233836</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Maven Support&#10;Modular level 2">
+      <created>1392671642912</created>
+      <updated>1392671642913</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -655,24 +796,24 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398374" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41038525" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32495812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2560423" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2580398" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32495812" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -691,7 +832,8 @@
     <MESSAGE value="deleted unnecessary files" />
     <MESSAGE value="Maven Support" />
     <MESSAGE value="added directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="added directories" />
+    <MESSAGE value="Maven Support&#10;Modular level 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maven Support&#10;Modular level 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -701,10 +843,91 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="867">
+          <folding>
+            <element signature="docComment;class#MyTest#0" expanded="false" />
+            <element signature="e#717#776#0" expanded="false" />
+            <element signature="method#createBIDESpec#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createBIDEIP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createSequenceMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createMethodMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#ismethodNotPresent#0;class#MyTest#0" expanded="false" />
+            <element signature="method#main#0;class#MyTest#0" expanded="false" />
+            <element signature="method#formatBIDEOP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getOccurrences#0;class#MyTest#0" expanded="false" />
+            <element signature="e#11110#11118#0" expanded="true" />
+            <element signature="e#11185#11193#0" expanded="true" />
+            <element signature="e#11489#11497#0" expanded="true" />
+            <element signature="e#11566#11574#0" expanded="true" />
+            <element signature="method#getOccurence#0;class#MyTest#0" expanded="false" />
+            <element signature="e#14337#14351#0" expanded="true" />
+            <element signature="method#isIncreasing#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getTempList#0;class#MyTest#0" expanded="false" />
+            <element signature="e#15477#15494#0" expanded="true" />
+            <element signature="e#15579#15587#0" expanded="true" />
+            <element signature="method#getOccurrences#1;class#MyTest#0" expanded="false" />
+            <element signature="method#runBIDE#0;class#MyTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BideMethodTracemap">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BIDEOP1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="22" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MethodTraceJSON.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="136" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="341" column="17" selection-start="16547" selection-end="16547" vertical-scroll-proportion="0.0" vertical-offset="5640" max-vertical-offset="8262">
-          <folding />
+          <folding>
+            <element signature="docComment;class#MyTest#0" expanded="false" />
+            <element signature="e#717#776#0" expanded="false" />
+            <element signature="method#createBIDESpec#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createBIDEIP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createSequenceMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createMethodMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#ismethodNotPresent#0;class#MyTest#0" expanded="false" />
+            <element signature="method#main#0;class#MyTest#0" expanded="false" />
+            <element signature="method#formatBIDEOP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getOccurrences#0;class#MyTest#0" expanded="false" />
+            <element signature="e#11110#11118#0" expanded="true" />
+            <element signature="e#11185#11193#0" expanded="true" />
+            <element signature="e#11489#11497#0" expanded="true" />
+            <element signature="e#11566#11574#0" expanded="true" />
+            <element signature="method#getOccurence#0;class#MyTest#0" expanded="false" />
+            <element signature="e#14337#14351#0" expanded="true" />
+            <element signature="method#isIncreasing#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getTempList#0;class#MyTest#0" expanded="false" />
+            <element signature="e#15477#15494#0" expanded="true" />
+            <element signature="e#15579#15587#0" expanded="true" />
+            <element signature="method#getOccurrences#1;class#MyTest#0" expanded="false" />
+            <element signature="method#runBIDE#0;class#MyTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -717,22 +940,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BIDEOP.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frequent.dat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170">
-          <folding />
-        </state>
+        <state line="4" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JSONTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="42" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1649" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1026#1034#0" expanded="true" />
+            <element signature="e#1225#1233#0" expanded="true" />
+            <element signature="e#1424#1432#0" expanded="true" />
+            <element signature="e#1602#1610#0" expanded="true" />
+            <element signature="e#1688#1705#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -745,36 +971,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SequenceMapJSON.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="198" column="22" selection-start="9835" selection-end="9835" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="6154">
-          <folding />
+          <folding>
+            <element signature="docComment;class#MyTest#0" expanded="false" />
+            <element signature="e#717#776#0" expanded="false" />
+            <element signature="method#createBIDESpec#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createBIDEIP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createSequenceMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createMethodMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#ismethodNotPresent#0;class#MyTest#0" expanded="false" />
+            <element signature="method#main#0;class#MyTest#0" expanded="false" />
+            <element signature="method#formatBIDEOP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getOccurrences#0;class#MyTest#0" expanded="false" />
+            <element signature="e#11110#11118#0" expanded="true" />
+            <element signature="e#11185#11193#0" expanded="true" />
+            <element signature="e#11489#11497#0" expanded="true" />
+            <element signature="e#11566#11574#0" expanded="true" />
+            <element signature="method#getOccurence#0;class#MyTest#0" expanded="false" />
+            <element signature="e#14337#14351#0" expanded="true" />
+            <element signature="method#isIncreasing#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getTempList#0;class#MyTest#0" expanded="false" />
+            <element signature="e#15477#15494#0" expanded="true" />
+            <element signature="e#15579#15587#0" expanded="true" />
+            <element signature="method#getOccurrences#1;class#MyTest#0" expanded="false" />
+            <element signature="method#runBIDE#0;class#MyTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JSONTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="42" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1649" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1026#1034#0" expanded="true" />
+            <element signature="e#1225#1233#0" expanded="true" />
+            <element signature="e#1424#1432#0" expanded="true" />
+            <element signature="e#1602#1610#0" expanded="true" />
+            <element signature="e#1688#1705#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="235" column="100" selection-start="11615" selection-end="11615" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="6154">
-          <folding />
+          <folding>
+            <element signature="docComment;class#MyTest#0" expanded="false" />
+            <element signature="e#717#776#0" expanded="false" />
+            <element signature="method#createBIDESpec#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createBIDEIP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createSequenceMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createMethodMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#ismethodNotPresent#0;class#MyTest#0" expanded="false" />
+            <element signature="method#main#0;class#MyTest#0" expanded="false" />
+            <element signature="method#formatBIDEOP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getOccurrences#0;class#MyTest#0" expanded="false" />
+            <element signature="e#11110#11118#0" expanded="true" />
+            <element signature="e#11185#11193#0" expanded="true" />
+            <element signature="e#11489#11497#0" expanded="true" />
+            <element signature="e#11566#11574#0" expanded="true" />
+            <element signature="method#getOccurence#0;class#MyTest#0" expanded="false" />
+            <element signature="e#14337#14351#0" expanded="true" />
+            <element signature="method#isIncreasing#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getTempList#0;class#MyTest#0" expanded="false" />
+            <element signature="e#15477#15494#0" expanded="true" />
+            <element signature="e#15579#15587#0" expanded="true" />
+            <element signature="method#getOccurrences#1;class#MyTest#0" expanded="false" />
+            <element signature="method#runBIDE#0;class#MyTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JSONTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="42" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="2176">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1026#1034#0" expanded="true" />
+            <element signature="e#1225#1233#0" expanded="true" />
+            <element signature="e#1424#1432#0" expanded="true" />
+            <element signature="e#1602#1610#0" expanded="true" />
+            <element signature="e#1688#1705#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -790,85 +1074,149 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="381" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BideMethodTracemap">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JSONTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="42" selection-start="3717" selection-end="3717" vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="2176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BIDEOP.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="389">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frequent.dat">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MethodMapJSON1.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SequenceMapJSON.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BideIP1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="366">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SequenceMapJSON1.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MethodTraceJSON.log">
+    <entry file="file://$PROJECT_DIR$/BideIP1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="136" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="366" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+    <entry file="file://$PROJECT_DIR$/BIDEOP.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="416" column="13" selection-start="19990" selection-end="19990" vertical-scroll-proportion="0.43342775" vertical-offset="6766" max-vertical-offset="11254">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="389" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MethodMapJSON1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.029513888" vertical-offset="0" max-vertical-offset="576" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BideMethodTracemap">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="510">
+        <state line="21" column="19" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/16.0.1/guava-16.0.1.jar!/com/google/common/collect/Sets.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="56" selection-start="4974" selection-end="4974" vertical-scroll-proportion="0.38484848" vertical-offset="1165" max-vertical-offset="5253">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1136" column="15" selection-start="44143" selection-end="44143" vertical-scroll-proportion="0.0" vertical-offset="18582" max-vertical-offset="52292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_07/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1089" column="0" selection-start="33445" selection-end="33445" vertical-scroll-proportion="0.33126935" vertical-offset="18015" max-vertical-offset="19057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MethodTraceJSON.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="136" selection-start="695" selection-end="695" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/junit/framework/TestCase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="858" selection-end="858" vertical-scroll-proportion="0.3607143" vertical-offset="307" max-vertical-offset="663">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.18579236" vertical-offset="0" max-vertical-offset="366">
+        <state line="37" column="31" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="663">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JSONTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="21" selection-start="6642" selection-end="6642" vertical-scroll-proportion="0.0" vertical-offset="2863" max-vertical-offset="3264">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1026#1034#0" expanded="true" />
+            <element signature="e#1225#1233#0" expanded="true" />
+            <element signature="e#1424#1432#0" expanded="true" />
+            <element signature="e#1602#1610#0" expanded="true" />
+            <element signature="e#1688#1705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyTestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="62" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="952">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BIDEOP1.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="32" selection-start="2522" selection-end="2522" vertical-scroll-proportion="1.6657304" vertical-offset="291" max-vertical-offset="1445">
+          <folding>
+            <element signature="docComment;class#MyTest#0" expanded="false" />
+            <element signature="e#717#776#0" expanded="false" />
+            <element signature="method#createBIDESpec#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createBIDEIP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createSequenceMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#createMethodMap#0;class#MyTest#0" expanded="false" />
+            <element signature="method#ismethodNotPresent#0;class#MyTest#0" expanded="false" />
+            <element signature="method#main#0;class#MyTest#0" expanded="false" />
+            <element signature="method#formatBIDEOP#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getOccurrences#0;class#MyTest#0" expanded="false" />
+            <element signature="e#11110#11118#0" expanded="true" />
+            <element signature="e#11185#11193#0" expanded="true" />
+            <element signature="e#11489#11497#0" expanded="true" />
+            <element signature="e#11566#11574#0" expanded="true" />
+            <element signature="method#getOccurence#0;class#MyTest#0" expanded="false" />
+            <element signature="e#14337#14351#0" expanded="true" />
+            <element signature="method#isIncreasing#0;class#MyTest#0" expanded="false" />
+            <element signature="method#getTempList#0;class#MyTest#0" expanded="false" />
+            <element signature="e#15477#15494#0" expanded="true" />
+            <element signature="e#15579#15587#0" expanded="true" />
+            <element signature="method#getOccurrences#1;class#MyTest#0" expanded="false" />
+            <element signature="method#runBIDE#0;class#MyTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
