@@ -302,7 +302,7 @@ public class MyTest {
     private JSONArray getOccurrences(String[] seqArray) {
         JSONArray mainArray = new JSONArray();
         try {
-            Object obj= JSONValue.parse(new FileReader("C:\\Users\\Kush\\Documents\\CS598\\nanoxml-sequence.json"));
+            Object obj= JSONValue.parse(new FileReader(this.folderName + "data\\nanoxml-sequence.json"));
             JSONArray array=(JSONArray)obj;
             Iterator iterator = array.iterator();
             JSONObject occurencesObject = new JSONObject();
