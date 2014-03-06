@@ -26,6 +26,7 @@ public class MyTest {
     int seqCount;
     int maxSeq;
     float seqTotal;
+    int noOfmthds;
 
 //    public MyTest(String folderName, String bideFolder) {
 //        createMethodMapAndSequenceMap(folderName, bideFolder);
@@ -53,23 +54,66 @@ public class MyTest {
         seqCount = 0;
         maxSeq = 0;
         seqTotal = 0;
+        noOfmthds = 0;
 
     }
     public void generateOP(){
-        createMethodMap();
-        createSequenceMap();
-        createBIDEIP();
+//        createMethodMap();
+//        createSequenceMap();
+//        createBIDEIP();
+        createBIDEIPfromSeqMap();
         createBIDESpec();
         runBIDE(this.bideFolder);
         formatBIDEOP(this.folderName, this.bideFolder);
     }
 
+    private void createBIDEIPfromSeqMap() {
+        try {
+            obj = JSONValue.parse(new FileReader(this.folderName+ "data\\nanoxml-method-map.json"));
+            array=(JSONArray)obj;
+            noOfmthds = array.size();
+            boolean flag = false;
+            JSONArray seq = new JSONArray();
+            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP.txt"));
+            obj = JSONValue.parse(new FileReader(this.folderName + "data\\nanoxml-sequence.json"));
+            array=(JSONArray)obj;
+            iterator = array.iterator();
+            while (iterator.hasNext()){
+                String line = iterator.next().toString();
+                Map lineMap = (Map)parser.parse(line, containerFactory);
+                System.out.println(lineMap.get("method-id"));
+                String mthdString = lineMap.get("method-id").toString();
+                int tempMthdCount = 0;
+                for(String str : mthdString.substring(1,mthdString.length()-1).split(", ")){
+                    System.out.println(str);
+                    bufferedWriter.write(str + " ");
+                    tempMthdCount = tempMthdCount + 1;
+                }
+                bufferedWriter.write("-1");
+                bufferedWriter.newLine();
+                if(tempMthdCount > this.maxSeq){
+                    this.maxSeq = tempMthdCount;
+                }
+                this.seqTotal = this.seqTotal + tempMthdCount;
+                this.seqCount = this.seqCount + 1;
+
+
+            }
+            bufferedWriter.write("-2");
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void createBIDESpec() {
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP1.spec"));
-            bufferedWriter.write(bideFolder + "BideIP1.txt");
+            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP.spec"));
+            bufferedWriter.write(bideFolder + "BideIP.txt");
             bufferedWriter.newLine();
-            bufferedWriter.write(String.valueOf(methodHashMap.size()));
+            bufferedWriter.write(String.valueOf(noOfmthds));
             bufferedWriter.newLine();
             bufferedWriter.write(String.valueOf(seqCount));
             bufferedWriter.newLine();
@@ -118,6 +162,7 @@ public class MyTest {
             }
             bufferedWriter.write("-1 -2");
             bufferedWriter.close();
+            noOfmthds = methodHashMap.size();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
@@ -257,7 +302,7 @@ public class MyTest {
     private JSONArray getOccurrences(String[] seqArray) {
         JSONArray mainArray = new JSONArray();
         try {
-            Object obj= JSONValue.parse(new FileReader(folderName + "SequenceMapJSON.log"));
+            Object obj= JSONValue.parse(new FileReader("C:\\Users\\Kush\\Documents\\CS598\\nanoxml-sequence.json"));
             JSONArray array=(JSONArray)obj;
             Iterator iterator = array.iterator();
             JSONObject occurencesObject = new JSONObject();
