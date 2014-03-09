@@ -60,10 +60,10 @@ public class MyTest {
 //        createMethodMap();
 //        createSequenceMap();
 //        createBIDEIP();
-        createBIDEIPfromSeqMap();
-        createBIDESpec();
+        //createBIDEIPfromSeqMap();
+        //createBIDESpec();
         //runBIDE(this.bideFolder);
-        //formatBIDEOP(this.folderName, this.bideFolder);
+        formatBIDEOP(this.folderName, this.bideFolder);
     }
 
     private void createBIDEIPfromSeqMap() {
@@ -264,8 +264,8 @@ public class MyTest {
 
     private void formatBIDEOP(String folderName, String bideFolder) {
         try {
-            BufferedWriter bideOP = new BufferedWriter(new FileWriter(folderName + "BIDEOP.log"));
-            Scanner sc = new Scanner(new FileReader(folderName+"frequent.dat"));
+            BufferedWriter bideOP = new BufferedWriter(new FileWriter(FilenameUtils.concat(Settings.bideFilesFolder, "nanoxml-0.05.json")));
+            Scanner sc = new Scanner(new FileReader(FilenameUtils.concat(Settings.bideFilesFolder, "frequent.dat")));
             JSONArray mainArray = new JSONArray();
 
             while (sc.hasNextLine()){
@@ -302,7 +302,7 @@ public class MyTest {
     private JSONArray getOccurrences(String[] seqArray) {
         JSONArray mainArray = new JSONArray();
         try {
-            Object obj= JSONValue.parse(new FileReader(this.folderName + "data\\nanoxml-sequence.json"));
+            Object obj= JSONValue.parse(new FileReader(FilenameUtils.concat(Settings.bideFilesFolder, Settings.methodSequenceFile)));
             JSONArray array=(JSONArray)obj;
             Iterator iterator = array.iterator();
             JSONObject occurencesObject = new JSONObject();
