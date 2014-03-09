@@ -1,11 +1,11 @@
 import com.google.common.collect.Sets;
+import org.apache.commons.io.FilenameUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import sun.tools.jar.resources.jar;
 
 import java.io.*;
 import java.util.*;
@@ -35,10 +35,9 @@ public class MyTest {
 //    }
 
 
-
     public MyTest(String folderName) {
         this.folderName = folderName;
-        this.bideFolder = "C:\\Users\\Kush\\Documents\\CS598\\BIDE\\";
+        this.bideFolder = Settings.bideFilesFolder;
         this.containerFactory = new ContainerFactory(){
             public List creatArrayContainer() {
                 return new ArrayList();
@@ -63,19 +62,19 @@ public class MyTest {
 //        createBIDEIP();
         createBIDEIPfromSeqMap();
         createBIDESpec();
-        runBIDE(this.bideFolder);
-        formatBIDEOP(this.folderName, this.bideFolder);
+        //runBIDE(this.bideFolder);
+        //formatBIDEOP(this.folderName, this.bideFolder);
     }
 
     private void createBIDEIPfromSeqMap() {
         try {
-            obj = JSONValue.parse(new FileReader(this.folderName+ "data\\nanoxml-method-map.json"));
+            obj = JSONValue.parse(new FileReader(Settings.methodMapFile));
             array=(JSONArray)obj;
             noOfmthds = array.size();
             boolean flag = false;
             JSONArray seq = new JSONArray();
-            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP.txt"));
-            obj = JSONValue.parse(new FileReader(this.folderName + "data\\nanoxml-sequence.json"));
+            bufferedWriter = new BufferedWriter(new FileWriter(FilenameUtils.concat(Settings.bideFilesFolder , Settings.bideInputFileName)));
+            obj = JSONValue.parse(new FileReader(Settings.methodSequenceFile));
             array=(JSONArray)obj;
             iterator = array.iterator();
             while (iterator.hasNext()){
@@ -110,8 +109,9 @@ public class MyTest {
 
     private void createBIDESpec() {
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP.spec"));
-            bufferedWriter.write(bideFolder + "BideIP.txt");
+            bufferedWriter = new BufferedWriter(new FileWriter(FilenameUtils.concat(Settings.bideFilesFolder,
+                    Settings.bideSpecFileName)));
+            bufferedWriter.write(Settings.pathToInputFileName);
             bufferedWriter.newLine();
             bufferedWriter.write(String.valueOf(noOfmthds));
             bufferedWriter.newLine();
@@ -131,7 +131,7 @@ public class MyTest {
             boolean flag = false;
             int seqCount = 0;
             JSONArray seq = new JSONArray();
-            bufferedWriter = new BufferedWriter(new FileWriter(bideFolder + "BideIP.txt"));
+            bufferedWriter = new BufferedWriter(new FileWriter(Settings.bideInputFileName));
             obj = JSONValue.parse(new FileReader(this.folderName + "MethodTraceJSON.log"));
             array=(JSONArray)obj;
             iterator = array.iterator();
