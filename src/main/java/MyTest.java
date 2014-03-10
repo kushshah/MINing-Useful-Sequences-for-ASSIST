@@ -54,6 +54,7 @@ public class MyTest {
         maxSeq = 0;
         seqTotal = 0;
         noOfmthds = 0;
+        //This is a branch test
 
     }
     public void generateOP(){
