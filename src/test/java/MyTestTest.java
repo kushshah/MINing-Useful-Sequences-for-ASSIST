@@ -38,7 +38,7 @@ public class MyTestTest extends TestCase {
         String[] stArr = "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20".split(",");
         ArrayList<String> mthd = new ArrayList(Arrays.asList("0", "1", "2","0","0","1","2","4","5","6","0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"));
         ArrayList<String> ctr = new ArrayList(Arrays.asList("0", "1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"));
-        ArrayList<List<String>> res = test.getOccurence(stArr, mthd, ctr);
+        ArrayList<ArrayList<String>> res = test.getOccurence(stArr, mthd, ctr);
         for(List<String> list: res){
             System.out.println(Arrays.toString(list.toArray()));
         }
