@@ -6,7 +6,7 @@ public class Settings {
     public static String subjectAppName = "nanoxml";
 
     //nanoxml
-    public static double bide_threshold_values[] = {0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 };
+    public static String bide_threshold_values[] = {"0.11", "0.12", "0.13", "0.14", "0.15", "0.16", "0.17", "0.18", "0.19", "0.20" };
 
 
     //input files to generating bide input files
@@ -17,12 +17,15 @@ public class Settings {
     public static String bideExecFolder = "C:\\Users\\Kush\\Documents\\CS598\\BIDE\\";
     public static String bideInputFileName = FilenameUtils.concat(basePath, subjectAppName+"\\"+subjectAppName + "-ip.txt");
     public static String bideSpecFileName = FilenameUtils.concat(basePath, subjectAppName +"\\"+subjectAppName+ "-ip.spec");
-    public static String batchFileName = FilenameUtils.concat(basePath, subjectAppName +"\\"+subjectAppName +  "-" + "cmd.bat");
-    public static String bideOutputFileName = FilenameUtils.concat(basePath, subjectAppName + "\\" + "frequent.dat");
+    public static String batchFileNameBase = FilenameUtils.concat(basePath, subjectAppName  + "\\");
+    public static String batchFileNameEnd =   "\\"  + "cmd.bat";
+    public static String bideOutputFileNameBase = FilenameUtils.concat(basePath, subjectAppName + "\\" );
+    public static String bideOutputFileNameEnd =  "\\"+"frequent.dat";
 
 
     //BIDE output converted to methods
 
-    public static String jsonOutputFileName = FilenameUtils.concat(basePath, subjectAppName +"\\"+subjectAppName +  "-" + "OP.json");
+    public static String jsonOutputFileNameBase = FilenameUtils.concat(basePath, subjectAppName +"\\");
+    public static String jsonOutputFileNameEnd = "\\"+subjectAppName+"-" + "OP.json";
 
 }

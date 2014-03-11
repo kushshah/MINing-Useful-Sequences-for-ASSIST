@@ -1,12 +1,9 @@
-import com.google.common.collect.Ordering;
-import com.google.common.collect.Sets;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import sun.tools.jar.resources.jar;
 
 import java.io.*;
 import java.util.*;
@@ -66,8 +63,13 @@ public class MyTest {
 //        createBIDEIP();
         createBIDEIPfromSeqMap();
         createBIDESpec();
-        runBIDE(this.bideFolder);
-        formatBIDEOP(this.folderName, this.bideFolder);
+        for(String threshold : Settings.bide_threshold_values){
+            File file = new File(Settings.basePath + Settings.subjectAppName + "\\" + threshold);
+            file.mkdir();
+            runBIDE(threshold);
+            formatBIDEOP(threshold);
+        }
+
     }
 
     private void createBIDEIPfromSeqMap() {
@@ -271,11 +273,11 @@ public class MyTest {
 
     }
 
-    private void formatBIDEOP(String folderName, String bideFolder) {
+    private void formatBIDEOP(String threshold) {
         try {
-            BufferedWriter bideOP = new BufferedWriter(new FileWriter(Settings.jsonOutputFileName));
+            BufferedWriter bideOP = new BufferedWriter(new FileWriter(Settings.jsonOutputFileNameBase + threshold + Settings.jsonOutputFileNameEnd));
             bideOP.write("[");
-            Scanner sc = new Scanner(new FileReader(Settings.bideOutputFileName));
+            Scanner sc = new Scanner(new FileReader(Settings.bideOutputFileNameBase + threshold + Settings.bideOutputFileNameEnd));
             JSONArray mainArray = new JSONArray();
             int occCount = 0;
             while (sc.hasNextLine()){
@@ -606,18 +608,18 @@ public class MyTest {
         return mainArray;
     }
 
-    private void runBIDE(String folderName) {
+    private void runBIDE(String threshold) {
         String line;
         Process pr = null;
         try {
 //            comment the following 3 lines if direct command from another file
-            BufferedWriter bw = new BufferedWriter(new FileWriter(Settings.batchFileName));
-            bw.write("cd " + Settings.basePath + Settings.subjectAppName);
+            BufferedWriter bw = new BufferedWriter(new FileWriter(Settings.batchFileNameBase + threshold + Settings.batchFileNameEnd));
+            bw.write("cd " + Settings.basePath + Settings.subjectAppName + "\\" + threshold);
             bw.newLine();
-            bw.write(Settings.bideExecFolder + "BIDEwithOUTPUT.exe " + Settings.bideSpecFileName + " " + "0.2");
+            bw.write(Settings.bideExecFolder + "BIDEwithOUTPUT.exe " + Settings.bideSpecFileName + " " + threshold);
             bw.close();
 //            change file name here for direct execution
-            pr = Runtime.getRuntime().exec(Settings.batchFileName);
+            pr = Runtime.getRuntime().exec(Settings.batchFileNameBase + threshold + Settings.batchFileNameEnd);
 
             BufferedReader Resultset = new BufferedReader(
                     new InputStreamReader (
