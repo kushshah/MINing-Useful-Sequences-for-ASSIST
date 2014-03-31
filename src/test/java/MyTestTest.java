@@ -47,4 +47,15 @@ public class MyTestTest extends TestCase {
         String folderName = "C:\\Users\\Kush\\IdeaProjects\\TestProcessing\\";
         MyTest test = new MyTest(folderName);
     }
+    public void testGetIndividualSet() throws Exception {
+        String folderName = "C:\\Users\\Kush\\IdeaProjects\\TestProcessing\\";
+        MyTest test = new MyTest(folderName);
+        String[] stArr = "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20".split(",");
+        ArrayList<String> mthd = new ArrayList(Arrays.asList("0", "1", "2","0","0","1","2","4","5","6","0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"));
+        ArrayList<String> ctr = new ArrayList(Arrays.asList("0", "1", "2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"));
+        ArrayList<ArrayList<String>> set = test.getIndividualSet(stArr, mthd, ctr);
+        for(ArrayList<String> eachList : set){
+            System.out.println(Arrays.toString(eachList.toArray()));
+        }
+    }
 }

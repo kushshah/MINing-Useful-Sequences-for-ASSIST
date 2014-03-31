@@ -354,8 +354,10 @@ public class MyTest {
 //                }
                 //String [] mthdArray = methodList.toArray(new String[methodList.size()]);
 //                ArrayList<ArrayList<String>> occurence = getOccurence(seqArray,mthdArray, ctrArray);
-                //if(seqArray.length > mthdArray.size()){
-                    ArrayList<ArrayList<String>> occurence = getSubSequences(seqArray,mthdArray, ctrArray);
+//                if(seqArray.length > mthdArray.size()){
+//                    ArrayList<ArrayList<String>> occurence = getSubSequences(seqArray,mthdArray, ctrArray);
+//                    ArrayList<ArrayList<String>> occurence = getShortestSubSequences(seqArray,mthdArray, ctrArray);
+                ArrayList<ArrayList<String>> occurence = getShortestRankedSubSequences(seqArray, mthdArray, ctrArray);
     //                if(occurence.size() != 0){
     //                System.out.println(lineMap.get("sequence-id")+":"+occurence.size());
     //                 }
@@ -383,6 +385,79 @@ public class MyTest {
             e.printStackTrace();
         }
         return mainArray;
+    }
+
+    private ArrayList<ArrayList<String>> getShortestRankedSubSequences(String[] seqArray, ArrayList<String> mthdArray, ArrayList<String> ctrArray) {
+        ArrayList<ArrayList<String>> listOfOccurrences = getIndividualSet(seqArray, mthdArray, ctrArray);
+        ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+        for(String each : listOfOccurrences.get(0)){
+            result.add(new ArrayList<String>(Arrays.asList(each)));
+        }
+        for(int i =1; i < listOfOccurrences.size();i++){
+            ArrayList<ArrayList<String>> temp = new ArrayList<ArrayList<String>>();
+            for(String comparer : listOfOccurrences.get(i)){
+                for(ArrayList<String> partSeq : result){
+                    if(Integer.parseInt(partSeq.get(partSeq.size()-1)) < Integer.parseInt(comparer)){
+                        ArrayList<String> tempArr = new ArrayList<String>(partSeq);
+                        tempArr.add(comparer);
+                        temp.add(tempArr);
+                    }
+                }
+            }
+            result = temp;
+        }
+        int difference = Integer.MAX_VALUE;
+        int counter = 0;
+        ArrayList<ArrayList<String>> newResult = new ArrayList<ArrayList<String>>();
+        for(int index = 0;index < Settings.rank;index++){
+            for(int i = 0;i<result.size();i++){
+                if((Integer.parseInt(result.get(i).get(result.get(i).size()-1)) - Integer.parseInt(result.get(i).get(0))) < difference){
+                    difference = (Integer.parseInt(result.get(i).get(result.get(i).size()-1)) - Integer.parseInt(result.get(i).get(0)));
+                    counter = i;
+                }
+            }
+            if(result.size() != 0){
+                newResult.add(result.get(counter));
+                result.remove(counter);
+                difference = Integer.MAX_VALUE;
+                counter = 0;
+            }
+        }
+        return newResult;
+    }
+
+    private ArrayList<ArrayList<String>> getShortestSubSequences(String[] seqArray, ArrayList<String> mthdArray, ArrayList<String> ctrArray) {
+        ArrayList<ArrayList<String>> listOfOccurrences = getIndividualSet(seqArray, mthdArray, ctrArray);
+        ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+        for(String each : listOfOccurrences.get(0)){
+            result.add(new ArrayList<String>(Arrays.asList(each)));
+        }
+        for(int i =1; i < listOfOccurrences.size();i++){
+            ArrayList<ArrayList<String>> temp = new ArrayList<ArrayList<String>>();
+            for(String comparer : listOfOccurrences.get(i)){
+                for(ArrayList<String> partSeq : result){
+                    if(Integer.parseInt(partSeq.get(partSeq.size()-1)) < Integer.parseInt(comparer)){
+                        ArrayList<String> tempArr = new ArrayList<String>(partSeq);
+                        tempArr.add(comparer);
+                        temp.add(tempArr);
+                    }
+                }
+            }
+            result = temp;
+        }
+        int difference = Integer.MAX_VALUE;
+        int counter = 0;
+        ArrayList<ArrayList<String>> newResult = new ArrayList<ArrayList<String>>();
+        for(int i = 0;i<result.size();i++){
+            if((Integer.parseInt(result.get(i).get(result.get(i).size()-1)) - Integer.parseInt(result.get(i).get(0))) < difference){
+                difference = (Integer.parseInt(result.get(i).get(result.get(i).size()-1)) - Integer.parseInt(result.get(i).get(0)));
+                counter = i;
+            }
+        }
+        if(result.size() != 0){
+            newResult.add(result.get(counter));
+        }
+        return newResult;
     }
 
     public ArrayList<ArrayList<String>> getSubSequences(String[] seqArray, ArrayList<String> mthdArray, ArrayList<String> ctrArray) {
