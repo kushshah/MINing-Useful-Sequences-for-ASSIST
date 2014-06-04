@@ -1,0 +1,43 @@
+% Chapter 3
+
+\chapter{Project Requirements} % Main chapter title
+
+\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter3} 
+
+\lhead{Chapter 3. \emph{Requirements}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Requirements}
+As seen in Chapter \ref{Chapter2} - \ref{Organization}, this project deals with steps \ref{3} and \ref{4}. We can assume them to be the main requirements. I will re-iterate them as follows:
+
+\begin{itemize}
+\item Run Sequences are analysed by Sequence Pattern Miner that mines patterns from the various runs.
+
+\item A subset of the most informative run sequences are submitted to the State Carver.
+\end{itemize}
+
+We will see them on a higher level:
+
+\subsection{Finding Frequent Sequences}
+\subsubsection{Get the files of Run Sequences(in the format of JSON files)}
+The project receives JSON (a data fromat explained in Chapter-\ref{Chapter4}) files and this becomes the primary input to the project . This file has all the Run Sequences with various information like a unique id, method name , class name, etc. A format is also provided and explained in detail in the Chapter-\ref{Chapter4}. We need to parse and read the files for further use.
+\subsubsection{BIDE Input generation}
+To find the frequent sequences we use a sequential pattern miner BIDE developed and maintained by University of Illinois at Urbana Champagne.
+For that we make an input file for the Sequential Pattern Miner(BIDE\cite{Wang:2004:BEM:977401.978142} explained in Chapter- \ref{Chapter4}). The input file requires a special format as a text file and also some statistics about the data in a spec file, like longest sequence, average sequence etc. which needs to be generated from the run sequences and fed to BIDE.
+
+
+\subsection{Mine Informative Sequences}
+
+\subsubsection{Find all possible valid sequences}
+ Use BIDE output file(containing frequent sequences) to mine the Run Sequences and find all the \textit{occurences} of the frequent sequences from the input JSON file. This seems to be a straightforward requirement but it requires careful consideration of many corner cases and with increasing sequence length the problem takes exponential time to solve. We have devised an algorithm to take care of the problem.
+ For eg. \{1 2 4 10\} is a frequent sequence and to find it out in a following run sequence \{1 2 4 10 12 3 5 7 4 2 7 4 8 10\} is a daunting task as we need to find all the possible occurences of the frequent sequence not considering its place in the run sequence meaning \{1 2 4 10\} at places \textless1 2 3 4\textgreater and \textless1 10 12 14\textgreater both are of importance as they are different in order of occuring in a particular run sequence and they both need to be tested as their states are most probably different to each other and thus will provide us with different information when tested.
+\subsubsection{Pruning}
+Applying the heuristic to get the \textit{shortest distance frequent sequences} or \textit{ranked shortest distance frequent sequences}. This prunes the solution space by a big factor and thus simplifies further situations.
+Shortest distance is as in the above example \{1 2 4 10\} at places \{1 2 3 4\} which is the shortest distance apart from another.
+Ranked shortest distance is the first \textit{n} shortest sequences.
+\subsubsection{Output File}
+Returning the subset of Run Sequences back in a JSON file.
+
+
+

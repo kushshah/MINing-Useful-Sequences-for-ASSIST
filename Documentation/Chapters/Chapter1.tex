@@ -1,0 +1,41 @@
+% Chapter 1
+%ad big bang and top-down, bottom up
+\chapter{Integration Testing} % Main chapter title
+
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Chapter 1. \emph{Integration Testing}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Contemporary Softwares}
+Companies today are embracing \emph{agile software development} to a greater extent for their softwares.
+
+The two main facets of agile technologies are \emph{incremental} and \emph{iterative}. They incorporate the ever changing requirements and aim to incorporate all. The very nature of the development practice being incremental requires the employees to have sprints and/or scrums for the projects. It is basically a short period in time after which the developers and managers meet and incrementally build upon the requirements or even change them if required.
+
+Due to this incremntal and iterative approach, testing plays a very important role in the process. More often the releases are between very small amount of time periods like two weeks or may be less.
+
+This creates a lot of versions with varied requirements and as the software is built incrementally and has smaller and broken up modules, \emph{Integration Testing} is very important and supposed to be be sound and intuitive.
+
+%----------------------------------------------------------------------------------------
+
+\section{Integration Testing}
+Integration testing involves testing components and/or modules in there entirety to check the correctness of the software.
+
+As discussed earlier, integration testing becomes important for agile development methods but it is also important in any software development methods. Integration Testing is a kind of black box testing used to test, as the name suggests the integrity of the software. Shared data and processes are simulated so that components are tested to behave and interact correctly among each other.
+
+At one end of the spectrum of integration testing we can view acceptance testing, which integrates all components of a system and evaluates according to the requirements. Whereas on the other end of the spectrum lies unit testing where a units(functions) belonging logically or structurally together(eg. class) are tested individually and then combined with similar other units to confirm functional correctness using test harnesses.
+
+Having said this, one needs a sound balance between both the approaches as a perfect integration testing would involve testing methodologies of both the extremes. As the system grows larger, it becomes exponentially difficult to test all the combinations possible. Thus it becomes more important for a better integration testing. Using the unit testing paradigm makes the testing very sluggish as it grows and randomly checking components to work together may be insensible because they may or may not interact in the system. Thus, generating good integration tests involves not only a significant effort to compose differents simulation of states of various components but also a good knowledge of the components and their internals and an acute intuitive niche of combining different components.
+
+%----------------------------------------------------------------------------------------
+
+\section{Problem}
+
+Thus from the above information we can conclude that setting up an Integration Testing mechanism is an overhead and is a burdern financially on the system at the initial phases but several case studies have proved that they increase the quality of a software in the long run.
+
+It has become more important to have integration test suites up and running from a very early stage looking at the Test Driven Development approach in the agile methodologies.
+
+One looses a count and scale of test suites once the project starts to grow at a faster pace as the suites grow exponentially with the increase in number of components becasue of the many combinations possible. There is also a factor of time as in agile development releases are too nearly placed with respect to time. Thus there is an urgent need to make this process as automated as possible.
+
+This project contributes in a very small way to the larger project and research carried out by \href{http://www.cs.uic.edu/~drmark/}{\supname} in the from of Automatic SynthesiS of Integration Software Tests(ASSIST)(explained in the Chapter\ref{Chapter2}).

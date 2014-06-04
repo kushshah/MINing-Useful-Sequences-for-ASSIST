@@ -1,0 +1,150 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Wang and Han(2004)]{Wang:2004:BEM:977401.978142}
+Jianyong Wang and Jiawei Han.
+\newblock Bide: Efficient mining of frequent closed sequences.
+\newblock In \emph{Proceedings of the 20th International Conference on Data
+  Engineering}, ICDE '04, pages 79--, Washington, DC, USA, 2004. IEEE Computer
+  Society.
+\newblock ISBN 0-7695-2065-0.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=977401.978142}.
+
+\bibitem[Baresi and Young(2001)]{Baresi:Oracles}
+Luciano Baresi and Michal Young.
+\newblock Test oracles.
+\newblock Technical Report CIS-TR-01-02, University of Oregon, Dept. of
+  Computer and Information Science, Eugene, Oregon, U.S.A., August 2001.
+\newblock \url{http://www.cs.uoregon.edu/~michal/pubs/oracles.html}.
+
+\bibitem[Peters and Parnas(1994)]{Peters1994}
+Dennis Peters and David~L. Parnas.
+\newblock Generating a test oracle from program documentation: work in
+  progress.
+\newblock In \emph{ISSTA '94: Proceedings of the 1994 ACM SIGSOFT international
+  symposium on Software testing and analysis}, pages 58--65, New York, NY, USA,
+  1994. ACM Press.
+\newblock ISBN 0-89791-683-2.
+\newblock \doi{http://doi.acm.org/10.1145/186258.186508}.
+
+\bibitem[Richardson et~al.(1992)Richardson, Leif-Aha, and
+  O'Malley]{Richardson-icse92}
+D.~J. Richardson, S.~Leif-Aha, and T.~O. O'Malley.
+\newblock {Specification-based Test Oracles for Reactive Systems}.
+\newblock In \emph{Proceedings of the 14th ICSE}, pages 105--118, May 1992.
+
+\bibitem[Richardson(1994)]{Richardson1994}
+Debra~J. Richardson.
+\newblock Taos: Testing with analysis and oracle support.
+\newblock In \emph{ISSTA '94: Proceedings of the 1994 ACM SIGSOFT ISSTA}, pages
+  138--153, New York, NY, USA, 1994. ACM Press.
+\newblock ISBN 0-89791-683-2.
+\newblock \doi{http://doi.acm.org/10.1145/186258.187158}.
+
+\bibitem[Dillon and Yu(1994)]{dillon-sigsoft94}
+Laura~K. Dillon and Qing Yu.
+\newblock Oracles for checking temporal properties of concurrent systems.
+\newblock In \emph{Proceedings of the ACM SIGSOFT '94}, pages 140--153,
+  December 1994.
+
+\bibitem[Conroy et~al.(2007)Conroy, Grechanik, Hellige, Liongosari, and
+  Xie]{MYSOA:07}
+Kevin~M. Conroy, Mark Grechanik, Matthew Hellige, Edy~S. Liongosari, and Qing
+  Xie.
+\newblock Automatic test generation from gui applications for testing web
+  services.
+\newblock In \emph{ICSM}, pages 345--354, 2007.
+
+\bibitem[Daniel et~al.(2009)Daniel, Jagannath, Dig, and
+  Marinov]{Daniel:2009:RSR:1747491.1747538}
+Brett Daniel, Vilas Jagannath, Danny Dig, and Darko Marinov.
+\newblock Reassert: Suggesting repairs for broken unit tests.
+\newblock In \emph{Proceedings of the 2009 IEEE/ACM International Conference on
+  Automated Software Engineering}, ASE '09, pages 433--444, Washington, DC,
+  USA, 2009. IEEE Computer Society.
+\newblock ISBN 978-0-7695-3891-4.
+\newblock \doi{10.1109/ASE.2009.17}.
+\newblock URL \url{http://dx.doi.org/10.1109/ASE.2009.17}.
+
+\bibitem[Boyer et~al.(1975)Boyer, Elspas, and
+  Levitt]{Boyer:1975:SFS:800027.808445}
+Robert~S. Boyer, Bernard Elspas, and Karl~N. Levitt.
+\newblock Select - a formal system for testing and debugging programs by
+  symbolic execution.
+\newblock In \emph{Proceedings of the international conference on Reliable
+  software}, pages 234--245, New York, NY, USA, 1975. ACM.
+\newblock \doi{10.1145/800027.808445}.
+\newblock URL \url{http://doi.acm.org/10.1145/800027.808445}.
+
+\bibitem[King(1976)]{DBLP:journals/cacm/King76}
+James~C. King.
+\newblock Symbolic execution and program testing.
+\newblock \emph{Commun. ACM}, 19\penalty0 (7):\penalty0 385--394, 1976.
+
+\bibitem[Clarke(1976)]{DBLP:journals/tse/Clarke76}
+Lori~A. Clarke.
+\newblock A system to generate test data and symbolically execute programs.
+\newblock \emph{IEEE Trans. Software Eng.}, 2\penalty0 (3):\penalty0 215--222,
+  1976.
+
+\bibitem[Csallner et~al.(2008)Csallner, Tillmann, and
+  Smaragdakis]{csallner08dysy}
+Christoph Csallner, Nikolai Tillmann, and Yannis Smaragdakis.
+\newblock {DySy}: Dynamic symbolic execution for invariant inference.
+\newblock In \emph{Proc. 30th ACM/IEEE International Conference on Software
+  Engineering (ICSE)}, pages 281--290. ACM, May 2008.
+
+\bibitem[Godefroid et~al.(2005)Godefroid, Klarlund, and Sen]{godefroid05dart}
+Patrice Godefroid, Nils Klarlund, and Koushik Sen.
+\newblock Dart: Directed automated random testing.
+\newblock In \emph{Proc. ACM SIGPLAN Conference on Programming Language Design
+  and Implementation (PLDI)}, pages 213--223. ACM, June 2005.
+
+\bibitem[Sen and Agha(2006)]{sen06cute}
+Koushik Sen and Gul Agha.
+\newblock Cute and {jCute}: Concolic unit testing and explicit path
+  model-checking tools.
+\newblock In \emph{Proc. International Conference on Computer Aided
+  Verification (CAV)}, pages 419--423. Springer, August 2006.
+
+\bibitem[Clarke and Richardson(1981)]{SYMEX:81}
+Lori~A. Clarke and Debra~J. Richardson, editors.
+\newblock \emph{Symbolic evaluation methods for program analysis.}, 1981.
+  Prentice-Hall.
+
+\bibitem[King(1971)]{KING:71}
+James~C. King.
+\newblock A program verifier.
+\newblock In \emph{IFIP Congress (1)}, pages 234--249, 1971.
+
+\bibitem[JSO({\natexlab{a}})]{JSON-standard}
+http://www.json.org, {\natexlab{a}}.
+
+\bibitem[JSO({\natexlab{b}})]{JSON-simple}
+https://code.google.com/p/json-simple/, {\natexlab{b}}.
+
+\bibitem[Mav()]{Maven}
+http://maven.apache.org/what-is-maven.html.
+
+\bibitem[pom()]{pom}
+https://maven.apache.org/guides/introduction/introduction-to-the-pom.html.
+
+\bibitem[Han et~al.(2007)Han, Cheng, Xin, and
+  Yan]{Han:2007:FPM:1275092.1275097}
+Jiawei Han, Hong Cheng, Dong Xin, and Xifeng Yan.
+\newblock Frequent pattern mining: current status and future directions.
+\newblock \emph{Data Min. Knowl. Discov.}, 15\penalty0 (1):\penalty0 55--86,
+  August 2007.
+\newblock ISSN 1384-5810.
+\newblock \doi{10.1007/s10618-006-0059-1}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10618-006-0059-1}.
+
+\bibitem[lcs()]{lcs}
+http://en.wikipedia.org/wiki/longest\textunderscore common\textunderscore
+  subsequence\textunderscore problem.
+
+\end{thebibliography}
